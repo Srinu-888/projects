@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+            background-color: aliceblue; 
+        }
+        .box{
+            width: 300px;
+            height: 400px;
+            text-align: center;
+            letter-spacing: 1px;
+            background-color: white;
+            padding: 70px 15px;
+            margin: 0px 20px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+            position: relative;
+            z-index: 2;
+        }
+        .box h3{
+            font-size: 35px;
+           margin: 20px 0;
+           color: #222;
+        }
+        .box:hover h3{
+            color: white;
+        }
+        .box:hover p{
+            color: #f0f0f0;
+        }
+        .box:hover button{
+            color:#444;
+            background-color: white;
+        }
+        .box p{
+            font-size: 15px;
+            color: #777;
+        }
+        .box button{
+            width: 140px;
+            height: 40px;
+            font-size: 17px;
+            border: none;
+            border-radius: 50px;
+            outline: none;
+            color: white;
+            background-color: #333;
+            margin-top: 40px;
+        }
+        .box::after{
+            content: "";
+            position: absolute;
+            top: 0%;left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            z-index: -2;
+            clip-path: circle(20% at 90% 10%);
+            transition: all .2s linear;
+        }
+        .box:nth-child(2)::after{
+            background-color:#3498db;
+        }
+        .box:nth-child(3)::after{
+            background-color:#2ecc71;
+        }
+        .box:hover::after{
+            clip-path: circle(100%);    
+        }
+        .box button:hover{
+            letter-spacing: 1.5px;
+            opacity: .9;
+        }
+        .number{
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 50px;
+            font-weight: bolder;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>card 1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente nostrum earum, quasi dolores debitis recusandae a culpa error voluptatum fugiat!</p>
+            <button>read more</button>
+            <span class="number">1</span>
+        </div>
+        <div class="box">
+            <h3>card 2</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente nostrum earum, quasi dolores debitis recusandae a culpa error voluptatum fugiat!</p>
+            <button>read more</button>
+            <span class="number">2</span>
+        </div>
+        <div class="box">
+             <h3>card 3</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente nostrum earum, quasi dolores debitis recusandae a culpa error voluptatum fugiat!</p>
+            <button>read more</button>
+            <span class="number">3</span>
+        </div>
+    </div>
+</body>
+</html>
